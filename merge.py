@@ -16,17 +16,14 @@ def merge(left, right):
     while i < len(left) and j < len(right):
         if left[i] <= right[j]:
             result.append(left[i])
-            i += 1
+            # BUG: forgot to increment i
         else:
             result.append(right[j])
             j += 1
-
-    # Add remaining elements
-    result.extend(left[i:])
-    result.extend(right[j:])
 
     return result
 
 
 arr = [38, 27, 43, 3, 9, 82, 10]
 print("Sorted array:", merge_sort(arr))
+
