@@ -14,8 +14,7 @@ def merge(left, right):
             j += 1
 
     # Add remaining elements
-    result.extend(left[i:])
-    result.extend(right[j:])
+    
 
     return result
 
